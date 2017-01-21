@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.hexagon.measure;
+package com.hexagon.magnitude;
 
 /**
  *
@@ -93,7 +93,9 @@ public class Unit{
      * @param denom the denom to set
      */
     public void setDenom(double denom) {
-        this.denom = denom;
+        if (denom!=0) {
+            this.denom = denom;
+        }
     }
 
     /**
@@ -121,7 +123,9 @@ public class Unit{
      * @param expo the expo to set
      */
     public void setExpo(double expo) {
-        this.expo = expo;
+        if (expo!=0) {
+            this.expo = expo;
+        }
     }
 
     /**
@@ -140,7 +144,7 @@ public class Unit{
 
     @Override
     public String toString() {
-        return "Unit{" + "name=" + name + ", symbol=" + symbol + '}';
+        return "Unit{" + "name=" + name + '}';
     }
 
     /**
@@ -157,5 +161,16 @@ public class Unit{
         this.reference = reference;
     }
     
+    public String show(double x){
+        return VALUE.format(x)+" "+SYMB.format(this.getSymbol());
+    }
     
+    public void copy_values(Unit unit) {
+        this.setNum(unit.getNum());
+        this.setDenom(unit.getDenom());
+        this.setExpo(unit.getExpo());
+        this.setExtern(unit.getExtern());
+        this.setIntern(unit.getIntern());
+        this.setRef(unit.getRef());
+    }
 }
