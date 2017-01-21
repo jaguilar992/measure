@@ -1,7 +1,9 @@
 # Measure | Java Converter Library
-Conversión entre unidades, para cada magnitud.
+Conversión por bloques de unidades, para cada magnitud conocida.
 
 Magnitudes disponibles: (Actualizando)
+
+## Unity.java
 
 ## Ejemplo de uso:
 
