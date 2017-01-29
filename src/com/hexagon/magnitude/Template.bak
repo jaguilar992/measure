@@ -1,0 +1,33 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this file, choose Tools | Templates
+ * and open in the editor.
+ */
+package com.hexagon.magnitude;
+
+/**
+ *
+ * @author jaguilar992
+ */
+public class Template extends Magnitude{
+    private String name;
+    // public static Unit unit = new Unit();
+    
+    public Template(double qt , Unit unit){
+        super(qt); // qt METERS
+        super.setName(name);
+        
+        /** INIT CHANGES */
+        
+        /** END CHANGES */
+        super.set_unit(unit); // SET selected
+    }
+    
+    public Template(double qt){
+        this(qt,Template.def);
+    }
+    
+    public Template(){
+        this(0,Template.def);
+    }
+}

@@ -3,9 +3,11 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/jagui/Documents/com.hexagon.measure/src/com/hexagon/magnitude/Distance.java</file>
-            <file>file:/C:/Users/jagui/Documents/com.hexagon.measure/src/com/hexagon/magnitude/Angle.java</file>
-            <file>file:/C:/Users/jagui/Documents/com.hexagon.measure/src/com/hexagon/magnitude/Aceleration.java</file>
+            <file>file:/D:/Dropbox02/Files/measure/test/Test2.java</file>
+            <file>file:/D:/Dropbox02/Files/measure/src/com/hexagon/magnitude/Temperature.java</file>
+            <file>file:/D:/Dropbox02/Files/measure/src/com/hexagon/magnitude/Magnitude.java</file>
+            <file>file:/D:/Dropbox02/Files/measure/src/com/hexagon/magnitude/Unit.java</file>
+            <file>file:/D:/Dropbox02/Files/measure/src/com/hexagon/magnitude/Area.java</file>
         </group>
     </open-files>
 </project-private>

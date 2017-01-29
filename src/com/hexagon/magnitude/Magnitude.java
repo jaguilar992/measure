@@ -129,15 +129,11 @@ public class Magnitude{
 
     private double convert(Unit unit){
         double factor = unit.getNum() / unit.getDenom();
+	double factorI = unit.getNumI() / unit.getDenomI();
         double value = this.values[unit.getRef()];
         double exit_value;
 
-        if (unit.getExpo()!=1){
-             exit_value = factor * Math.pow(value + unit.getIntern(),unit.getExpo())+ unit.getExtern();
-        }
-        else{
-            exit_value = factor * (value + unit.getIntern())+ unit.getExtern();
-        }   
+	exit_value = factor * Math.pow(factorI*value + unit.getIntern(),unit.getExpo())+ unit.getExtern();  
         this.values[this.search_unit(unit)]=exit_value;
         return exit_value;
     }
@@ -156,7 +152,8 @@ public class Magnitude{
             double v = this.values[i];
             int ref = u.getRef();
             double factor = u.getDenom() / u.getNum();
-            this.values[ref]=factor*Math.pow((this.values[i] - u.getExtern() ), 1/u.getExpo())- u.getIntern();
+	    double factorI = u.getDenomI() / u.getNumI();
+            this.values[ref]=factorI*Math.pow(( factor* (this.values[i] - u.getExtern()) ), 1/u.getExpo())- u.getIntern();
         }
         return this.values[this.def_ud];
     }

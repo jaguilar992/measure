@@ -1,9 +1,5 @@
 
-import com.hexagon.magnitude.Aceleration;
 import com.hexagon.magnitude.Area;
-import com.hexagon.magnitude.Distance;
-import com.hexagon.magnitude.Mass;
-import com.hexagon.magnitude.Temperature;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -18,9 +14,19 @@ import com.hexagon.magnitude.Temperature;
 public class Test2 {
     public static void main(String[] args) {
         Area m = new Area();
-        m.setQt(1);
-        m.set_unit(Area.mz);
+	
+	//Distance m = new Distance();
+	//Temperature m = new Temperature();
+	m.setQt(1);
+	//m.set_unit(Temperature.fahrenheit);
+	//m.set_unit(Area.diam_metro);
+        //m.setQt(1);
+        //m.set_unit(Area.mz);
         System.out.println(m);
+	
+	System.out.println(m.uds()[11]);
+	System.out.println(m.vals()[11]);
+	
     }
     
     public static void line(){

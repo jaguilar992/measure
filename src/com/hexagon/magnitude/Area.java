@@ -100,6 +100,33 @@ public class Area extends Magnitude{
         mz.setDenom(10000);
         super.add(mz);
 
+        diam_metro.setName("diam_metro");
+        diam_metro.setSymbol("D[m]");
+        diam_metro.setRef(super.search_unit(Area.metro2));
+        diam_metro.setNum(2);
+        diam_metro.setDenomI(Math.PI);
+        diam_metro.setExpo(0.5);
+        super.add(diam_metro);
+
+        diam_centi.setName("diam_centi");
+        diam_centi.setSymbol("D[cm]");
+        diam_centi.setRef(super.search_unit(Area.diam_metro));
+        diam_centi.setNum(100);
+        super.add(diam_centi);
+
+        diam_pulga.setName("diam_pulga");
+        diam_pulga.setSymbol("D[in]");
+        diam_pulga.setRef(super.search_unit(Area.diam_centi));
+        diam_pulga.setDenom(2.54);
+        super.add(diam_pulga);
+
+        rad_metro.setName("rad_metro");
+        rad_metro.setSymbol("R[m]");
+        rad_metro.setRef(super.search_unit(Area.diam_metro));
+        rad_metro.setDenom(2);
+        super.add(rad_metro);
+
+
 
         /** END CHANGES */
         super.set_unit(unit); // SET selected

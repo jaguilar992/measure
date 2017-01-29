@@ -16,8 +16,8 @@ public class CompoundUnit extends Unit{
     private int count=1;
     
     
-    public CompoundUnit(String name, String symbol, double num, double denom,double intern,double expo, double extern){
-        super(name,symbol,num,denom,intern,expo,extern);
+    public CompoundUnit(String name, String symbol, double num, double denom, double numi, double denomi,double intern,double expo, double extern){
+        super(name,symbol,num,denom,numi, denomi,intern,expo,extern);
         this.factors[0]=1;
     }
     

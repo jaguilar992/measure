@@ -62,10 +62,10 @@ public class Temperature extends Magnitude{
     }
     
     public Temperature(double qt){
-        this(qt,Temperature.kelvin);
+        this(qt,Temperature.celsius);
     }
     
     public Temperature(){
-        this(0,Temperature.kelvin);
+        this(0,Temperature.celsius);
     }
 }
