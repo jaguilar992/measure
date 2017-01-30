@@ -20,20 +20,22 @@ public class Area extends Magnitude{
     public static Unit pie2  = new Unit();
     public static Unit pulga2  = new Unit();
     public static Unit milla2  = new Unit();
-    public static Unit yd2  = new Unit();
-    public static Unit vr2  = new Unit();
+    public static Unit yarda2  = new Unit();
+    public static Unit vara2  = new Unit();
     public static Unit mz  = new Unit();
-    public static Unit diam_metro = new Unit();  // CIRCUNFERENCE
-    public static Unit diam_centi = new Unit();  // CIRCUNFERENCE
-    public static Unit diam_pulga = new Unit();  // CIRCUNFERENCE
-    public static Unit rad_metro = new Unit();  // CIRCUNFERENCE
-    public static Unit rad_centi = new Unit();  // CIRCUNFERENCE
-    public static Unit rad_pulga = new Unit();  // CIRCUNFERENCE
+    public static Unit ha  = new Unit();
+    
+    public static Unit diam_metro = new Unit();  // DIAMETER CIRCUNFERENCE
+    public static Unit diam_centi = new Unit();  // DIAMETER CIRCUNFERENCE
+    public static Unit diam_pulga = new Unit();  // DIAMETER CIRCUNFERENCE
+    public static Unit rad_metro = new Unit();  // RADIUS CIRCUNFERENCE
+    public static Unit rad_centi = new Unit();  // RADIUS CIRCUNFERENCE
+    public static Unit rad_pulga = new Unit();  // RADIUS CIRCUNFERENCE
 
 
     
     public Area(double qt , Unit unit){
-        super(qt); // qt METERS
+        super(qt);
         super.setName(name);
         
         /** INIT CHANGES */
@@ -82,21 +84,21 @@ public class Area extends Magnitude{
         milla2.setDenom(Math.pow(5280,2));
         super.add(milla2);
 
-        yd2.setName("yd2");
-        yd2.setSymbol("yd²");
-        yd2.setRef(super.search_unit(Area.pulga2));
-        yd2.setDenom(Math.pow(36,2));
-        super.add(yd2);
+        yarda2.setName("yarda2");
+        yarda2.setSymbol("yd²");
+        yarda2.setRef(super.search_unit(Area.pulga2));
+        yarda2.setDenom(Math.pow(36,2));
+        super.add(yarda2);
 
-        vr2.setName("vr2");
-        vr2.setSymbol("vr²");
-        vr2.setRef(super.search_unit(Area.pulga2));
-        vr2.setDenom(Math.pow(33,2));
-        super.add(vr2);
+        vara2.setName("vara2");
+        vara2.setSymbol("vr²");
+        vara2.setRef(super.search_unit(Area.pulga2));
+        vara2.setDenom(Math.pow(33,2));
+        super.add(vara2);
 
         mz.setName("manzana");
         mz.setSymbol("mz");
-        mz.setRef(super.search_unit(Area.vr2));
+        mz.setRef(super.search_unit(Area.vara2));
         mz.setDenom(10000);
         super.add(mz);
 
@@ -125,6 +127,23 @@ public class Area extends Magnitude{
         rad_metro.setRef(super.search_unit(Area.diam_metro));
         rad_metro.setDenom(2);
         super.add(rad_metro);
+        
+        rad_centi.setName("rad_centi");
+        rad_centi.setSymbol("R[cm]");
+        rad_centi.setRef(super.search_unit(Area.diam_centi));
+        rad_centi.setDenom(2);
+        super.add(rad_centi);
+        
+        rad_pulga.setName("rad_pulga");
+        rad_pulga.setSymbol("R[in]");
+        rad_pulga.setRef(super.search_unit(Area.diam_pulga));
+        rad_pulga.setDenom(2);
+        super.add(rad_pulga);
+
+        ha.setName("hecta");
+        ha.setSymbol("ha");
+        ha.setDenom(10000);
+        super.add(ha);
 
 
 

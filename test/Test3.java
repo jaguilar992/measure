@@ -23,6 +23,6 @@ public class Test3 {
         c.add_factor(12);
         
         System.out.println(c.show(78.0018));
-        
+        System.out.println(1/3.0);
     }
 }
