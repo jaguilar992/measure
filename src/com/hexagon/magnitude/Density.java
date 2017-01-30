@@ -19,7 +19,7 @@ public class Density extends Magnitude{
     public static Unit gramo_centi3 = new Unit();
     public static Unit gramo_mili3 = new Unit();
     public static Unit mili_metro3 = new Unit();
-    public static Unit mili_centi3 = new Unit();
+    public static Unit mili_centi3 = new Unit();    
     public static Unit mili_mili3 = new Unit();
     public static Unit kilo_litro = new Unit();
     public static Unit gramo_litro = new Unit();
